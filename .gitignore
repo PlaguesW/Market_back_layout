@@ -1,0 +1,5 @@
+# Main settings
+.env
+
+# Virtual env
+myvenv/
