@@ -1,7 +1,10 @@
 import os
+import sys
 from celery import Celery
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PartsShop.settings.development')
+print("PYTHONPATH:", sys.path)
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PartsShopSettings.settings')
 
 celery_app = Celery('PartsShop')
 

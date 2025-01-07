@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PartsShop.urls'
+ROOT_URLCONF = 'PartsShopSettings.urls'
 
 TEMPLATES = [
     {
@@ -110,7 +110,7 @@ KAVENEGAR_SECRET_KEY = config('KAVENEGAR_SECRET_KEY')
 
 # Redis Config
 REDIS_HOST = config('REDIS_HOST', default='localhost')
-REDIS_PORT = config('REDIS_PORT', cast=int, default=6379)
+REDIS_PORT = config('REDIS_PORT', default=6379) # TODO setup redis port 
 
 # Redis DB Numbers
 PHONE_REGISTER_DB = 1
