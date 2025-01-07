@@ -1,18 +1,14 @@
-
 from sqlalchemy.orm import Session
 
 from app.models.user import User
 from app.schemas.user import UserCreate
 
 def create_user(db: Session, user_in: UserCreate) -> User:
-    """
-    Create user and save it to the database
-    """
+    hashed_password = user_in.password  # TODO: hash pass
     db_user = User(
         email=user_in.email,
         full_name=user_in.full_name,
-
-        hashed_password=user_in.password
+        hashed_password=hashed_password
     )
     db.add(db_user)
     db.commit()
