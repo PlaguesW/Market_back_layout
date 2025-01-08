@@ -7,6 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 INSTALLED_APPS = [
+    'django_celery_beat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -16,7 +17,7 @@ INSTALLED_APPS = [
 
     # Third Party Apps
     'rest_framework',
-    'django_celery_beat',
+    # 'django_celery_beat',
     'drf_yasg',
 
     # Local Apps
@@ -59,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'PartsShop.wsgi.application'
+WSGI_APPLICATION = 'PartsShopSettings.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

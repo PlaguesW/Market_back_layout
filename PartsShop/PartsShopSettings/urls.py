@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 
-from PartsShop.yasg import schema_view
+from PartsShopSettings.yasg import schema_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
